@@ -1,0 +1,24 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment: { POSTGRES_USER: app, POSTGRES_PASSWORD: app, POSTGRES_DB: pickup }
+    volumes: ["./docker/init.sql:/docker-entrypoint-initdb.d/init.sql"]
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U app -d pickup"], interval: 2s, timeout: 3s, retries: 20 }
+  backend:
+    build: ./backend
+    environment:   # defaults work with no .env file; a .env next to this file overrides them
+      WEBHOOK_SECRET: ${WEBHOOK_SECRET:-change-me-webhook-secret}
+      ADMIN_TOKEN: ${ADMIN_TOKEN:-change-me-admin-token}
+      ENABLE_SIMULATOR: ${ENABLE_SIMULATOR:-true}
+      HOLD_SECONDS: ${HOLD_SECONDS:-120}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-sonnet-5-5}
+      DATABASE_URL: postgres://app:app@db:5432/pickup
+      TEST_DATABASE_URL: postgres://app:app@db:5432/pickup_test
+    depends_on: { db: { condition: service_healthy } }
+    ports: ["3000:3000"]
+  frontend:
+    build: ./frontend
+    environment: { API_URL: 'http://backend:3000' }
+    depends_on: [backend]
+    ports: ["5173:5173"]
