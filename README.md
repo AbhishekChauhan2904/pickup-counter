@@ -95,9 +95,6 @@ Screenshots are stored under [`docs/screenshots/`](docs/screenshots/). The early
 
 ![Empty cart drawer](docs/screenshots/07-empty-cart.png)
 
-*Empty cart state and checkout prompt.*
-
-![Cart quantity indicator](docs/screenshots/08-cart-count.png)
 
 *Header cart summary after adding an item.*
 
