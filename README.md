@@ -62,7 +62,7 @@ The backend initializes the schema and sample products at startup. For local set
 
 ## Screenshots
 
-Screenshots are stored under [`docs/screenshots/`](docs/screenshots/). The early payment/catalog shots show earlier UI snapshots; the later set shows the app, payment options, and run evidence. One supplied image is an external Blinkit catalog reference, not this app; it is labelled as such and is not presented as project functionality.
+Screenshots are stored under [`docs/screenshots/`](docs/screenshots/). The early payment/catalog shots show earlier UI snapshots; the later set shows the app, payment options, and run evidence. it is labelled as such and is not presented as project functionality.
 
 ### Catalog and cart
 
@@ -77,7 +77,7 @@ Screenshots are stored under [`docs/screenshots/`](docs/screenshots/). The early
 
 *Earlier catalog layout with categories and available stock.*
 
-![External Blinkit catalog reference](docs/screenshots/03-external-blinkit-reference.png)
+
 
 *External visual reference supplied with the screenshots; not part of Pickup Counter.*
 
