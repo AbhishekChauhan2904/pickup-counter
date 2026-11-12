@@ -1,6 +1,6 @@
 import { buildApp } from "./app.js";
-import { migrate, pool } from "./db.js";
-import { sweepExpired } from "./orders.js";
+import { migrate, pool } from "./db/db.js";
+import { sweepExpired } from "./orders/orders.js";
 
 // Wait for PostgreSQL instead of crashing (it may still be starting).
 for (let attempt = 1; ; attempt++) {

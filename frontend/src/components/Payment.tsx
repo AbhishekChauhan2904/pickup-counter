@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { api, ApiError, rupees } from "./api";
+import { api, ApiError, rupees } from "../api";
 
 type Order = {
   id: string;

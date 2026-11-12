@@ -1,5 +1,5 @@
 import { useMemo, useState, type Dispatch, type SetStateAction } from "react";
-import { rupees, MAX_ITEM, MAX_TOTAL, type Product, type Cart } from "./api";
+import { rupees, MAX_ITEM, MAX_TOTAL, type Product, type Cart } from "../api";
 
 export default function Shop({
   products,

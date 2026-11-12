@@ -1,8 +1,8 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { z } from "zod";
-import { withTx, logEvent } from "./db.js";
-import { AppError } from "./errors.js";
-import { AVAILABLE_SQL, LATE_PAYMENT_GRACE_SECONDS } from "./orders.js";
+import { withTx, logEvent } from "../db/db.js";
+import { AppError } from "../middleware/errors.js";
+import { AVAILABLE_SQL, LATE_PAYMENT_GRACE_SECONDS } from "../orders/orders.js";
 
 export const sign = (
   raw: Buffer | string,

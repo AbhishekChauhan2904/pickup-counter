@@ -1,5 +1,5 @@
-import { withTx, logEvent } from "./db.js";
-import { AppError } from "./errors.js";
+import { withTx, logEvent } from "../db/db.js";
+import { AppError } from "../middleware/errors.js";
 
 export async function claimPickup(orderId: string) {
   return withTx(async (c) => {
