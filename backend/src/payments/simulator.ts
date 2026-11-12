@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { z } from "zod";
-import { getOrder } from "./orders.js";
+import { getOrder } from "../orders/orders.js";
 import { handleWebhook, sign } from "./payments.js";
 
 // Stand-in for the payment provider. It validates the payment form, then calls OUR webhook with a correctly signed event,

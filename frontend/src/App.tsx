@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { api, type Product, type Cart } from "./api";
-import Header from "./Header";
-import Shop from "./Shop";
-import CartDrawer from "./CartDrawer";
-import Payment from "./Payment";
-import Chat from "./Chat";
-import Boundary from "./Boundary";
+import Header from "./components/Header";
+import Shop from "./components/Shop";
+import CartDrawer from "./components/CartDrawer";
+import Payment from "./components/Payment";
+import Chat from "./components/Chat";
+import Boundary from "./components/Boundary";
 
 export default function App() {
   const [orderId, setOrderId] = useState<string | null>(() =>

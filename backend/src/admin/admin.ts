@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { z } from "zod";
-import { pool, withTx, logEvent } from "./db.js";
-import { AppError } from "./errors.js";
+import { pool, withTx, logEvent } from "../db/db.js";
+import { AppError } from "../middleware/errors.js";
 
 export const admin = Router();
 admin.use((req, _res, next) => {

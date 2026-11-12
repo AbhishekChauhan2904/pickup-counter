@@ -1,13 +1,13 @@
 import express from "express";
-import { pool } from "./db.js";
-import { errorHandler, requestId, AppError } from "./errors.js";
-import { createOrder, getOrder, listProducts, orderInput } from "./orders.js";
-import { handleWebhook } from "./payments.js";
-import { claimPickup } from "./pickup.js";
-import { suggest, rateLimited } from "./assistant.js";
-import { admin } from "./admin.js";
-import { chat } from "./chat.js";
-import { payInput, simulatePayment } from "./simulator.js";
+import { pool } from "./db/db.js";
+import { errorHandler, requestId, AppError } from "./middleware/errors.js";
+import { createOrder, getOrder, listProducts, orderInput } from "./orders/orders.js";
+import { handleWebhook } from "./payments/payments.js";
+import { claimPickup } from "./pickup/pickup.js";
+import { suggest, rateLimited } from "./assistant/assistant.js";
+import { admin } from "./admin/admin.js";
+import { chat } from "./assistant/chat.js";
+import { payInput, simulatePayment } from "./payments/simulator.js";
 import { z } from "zod";
 
 export function buildApp() {

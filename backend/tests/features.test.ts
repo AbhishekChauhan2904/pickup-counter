@@ -1,8 +1,8 @@
 import { describe, it, expect, beforeAll, beforeEach, afterAll } from "vitest";
 import request from "supertest";
 import { buildApp } from "../src/app.js";
-import { migrate, pool } from "../src/db.js";
-import { seed } from "../src/seed.js";
+import { migrate, pool } from "../src/db/db.js";
+import { seed } from "../src/db/seed.js";
 
 const app = buildApp();
 const order = (items: any[], key?: string) => {

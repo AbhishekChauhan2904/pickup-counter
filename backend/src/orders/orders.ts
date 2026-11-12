@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { withTx, pool, logEvent, type Db } from "./db.js";
-import { AppError } from "./errors.js";
+import { withTx, pool, logEvent, type Db } from "../db/db.js";
+import { AppError } from "../middleware/errors.js";
 
 export const HOLD_SECONDS = Number(process.env.HOLD_SECONDS ?? 120);
 export const LATE_PAYMENT_GRACE_SECONDS = 30;

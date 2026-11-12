@@ -1,4 +1,4 @@
-import { rupees } from "./api";
+import { rupees } from "../api";
 
 function Logo() {
   return (

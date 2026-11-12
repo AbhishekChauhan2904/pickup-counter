@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { api } from "./api";
+import { api } from "../api";
 
 type Msg = {
   role: "me" | "bot";

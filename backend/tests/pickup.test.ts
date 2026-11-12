@@ -1,8 +1,8 @@
 import { describe, it, expect, beforeAll, beforeEach, afterAll } from "vitest";
 import request from "supertest";
 import { buildApp } from "../src/app.js";
-import { migrate, pool } from "../src/db.js";
-import { sign } from "../src/payments.js";
+import { migrate, pool } from "../src/db/db.js";
+import { sign } from "../src/payments/payments.js";
 
 const app = buildApp();
 let evt = 0;

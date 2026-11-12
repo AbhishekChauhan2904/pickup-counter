@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { MAX_PER_ITEM } from "./orders.js";
+import { MAX_PER_ITEM } from "../orders/orders.js";
 
 export type P = {
   id: number;

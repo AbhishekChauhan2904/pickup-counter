@@ -7,7 +7,7 @@ import {
   type Cart,
   MAX_ITEM,
   MAX_TOTAL,
-} from "./api";
+} from "../api";
 
 export default function CartDrawer({
   open,
